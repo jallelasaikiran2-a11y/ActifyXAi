@@ -1,0 +1,630 @@
+/* ================================================================
+   ActifyXAI — styles.css  v7.1
+   Popup · App Selector · LLM Selector · IA Instant Answer Panel
+   ================================================================ */
+
+/* ── Main Popup ─────────────────────────────────────────────── */
+
+#actifyxai-popup {
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  background: rgba(9, 13, 27, 0.96) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 14px !important;
+  padding: 5px 8px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 2px !important;
+  flex-wrap: nowrap !important;
+  box-shadow:
+    0 18px 48px -8px rgba(0, 0, 0, 0.65),
+    0 0 0 0.5px rgba(255, 255, 255, 0.05) inset !important;
+  font-family: -apple-system, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif !important;
+  animation: actifyPopupIn 0.17s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  pointer-events: auto !important;
+  user-select: none !important;
+  white-space: nowrap !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+@keyframes actifyPopupIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ── Intent Badge ────────────────────────────────────────────── */
+
+.actifyxai-badge {
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: rgba(148, 163, 184, 0.75) !important;
+  padding: 2px 7px !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  flex-shrink: 0 !important;
+  line-height: 1.7 !important;
+  font-family: inherit !important;
+}
+
+/* ── Vertical Divider ────────────────────────────────────────── */
+
+.actifyxai-divider {
+  width: 1px !important;
+  height: 18px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  margin: 0 4px !important;
+  flex-shrink: 0 !important;
+}
+
+/* ── Action Buttons ──────────────────────────────────────────── */
+
+.actifyxai-btn {
+  all: unset !important;
+  box-sizing: border-box !important;
+  color: #dde4f0 !important;
+  border: 1px solid transparent !important;
+  border-radius: 9px !important;
+  padding: 6px 11px !important;
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: background 0.12s ease, color 0.12s ease, transform 0.1s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  font-family: inherit !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.actifyxai-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  transform: translateY(-1px) !important;
+}
+
+.actifyxai-btn:active {
+  transform: translateY(0) !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+}
+
+/* ── Selector Panel (Apps + LLM chooser) ────────────────────── */
+
+#actifyxai-selector {
+  position: fixed !important;
+  z-index: 2147483646 !important;
+  background: rgba(11, 16, 33, 0.98) !important;
+  backdrop-filter: blur(28px) !important;
+  -webkit-backdrop-filter: blur(28px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 14px !important;
+  padding: 8px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  box-shadow:
+    0 28px 64px -10px rgba(0, 0, 0, 0.75),
+    0 0 0 0.5px rgba(255, 255, 255, 0.04) inset !important;
+  font-family: -apple-system, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif !important;
+  animation: actifySelectorIn 0.16s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  min-width: 195px !important;
+  pointer-events: auto !important;
+  user-select: none !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+@keyframes actifySelectorIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ── Selector Header ─────────────────────────────────────────── */
+
+.actifyxai-sel-label {
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: rgba(148, 163, 184, 0.45) !important;
+  padding: 2px 10px 7px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+  margin-bottom: 3px !important;
+  font-family: inherit !important;
+}
+
+/* ── App / LLM Buttons ───────────────────────────────────────── */
+
+.actifyxai-app-btn {
+  all: unset !important;
+  box-sizing: border-box !important;
+  color: #c8d4e8 !important;
+  border: 1px solid transparent !important;
+  border-radius: 9px !important;
+  padding: 8px 12px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+  transition: background 0.11s ease, color 0.11s ease, transform 0.09s ease !important;
+  font-family: inherit !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.actifyxai-app-btn:hover {
+  background: rgba(255, 255, 255, 0.09) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.11) !important;
+  transform: translateX(3px) !important;
+}
+
+.actifyxai-app-btn:active {
+  background: rgba(255, 255, 255, 0.06) !important;
+  transform: translateX(1px) !important;
+}
+
+.actifyxai-app-icon {
+  font-size: 17px !important;
+  line-height: 1 !important;
+  width: 22px !important;
+  text-align: center !important;
+  flex-shrink: 0 !important;
+}
+
+/* ── Selector Footer Hint ────────────────────────────────────── */
+
+.actifyxai-sel-hint {
+  font-size: 9.5px !important;
+  color: rgba(100, 116, 139, 0.5) !important;
+  text-align: center !important;
+  padding: 7px 8px 2px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  margin-top: 3px !important;
+  letter-spacing: 0.03em !important;
+  font-family: inherit !important;
+}
+
+/* ── IA Button (Instant Answer — special highlight) ─────────── */
+
+.actifyxai-ia-btn {
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.18) 0%,
+    rgba(168, 85, 247, 0.14) 100%
+  ) !important;
+  border-color: rgba(139, 92, 246, 0.35) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.actifyxai-ia-btn::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(167, 139, 250, 0.12) 50%,
+    transparent 100%
+  ) !important;
+  animation: actifyIAShimmer 2.2s ease-in-out infinite !important;
+}
+
+@keyframes actifyIAShimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.actifyxai-ia-btn:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.32) 0%,
+    rgba(168, 85, 247, 0.26) 100%
+  ) !important;
+  border-color: rgba(167, 139, 250, 0.6) !important;
+  color: #e0d7ff !important;
+}
+
+.actifyxai-ia-label {
+  display: flex !important;
+  flex-direction: column !important;
+  line-height: 1.2 !important;
+}
+
+.actifyxai-ia-label em {
+  font-style: normal !important;
+  font-size: 9px !important;
+  font-weight: 400 !important;
+  color: rgba(167, 139, 250, 0.7) !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+/* ── IA Instant Answer Panel ─────────────────────────────────── */
+
+#actifyxai-ia-panel {
+  position: fixed !important;
+  z-index: 2147483645 !important;
+  background: rgba(10, 12, 28, 0.97) !important;
+  backdrop-filter: blur(32px) !important;
+  -webkit-backdrop-filter: blur(32px) !important;
+  border: 1px solid rgba(139, 92, 246, 0.3) !important;
+  border-radius: 14px !important;
+  width: 480px !important;
+  max-width: calc(100vw - 24px) !important;
+  box-shadow:
+    0 24px 60px -10px rgba(0, 0, 0, 0.8),
+    0 0 0 0.5px rgba(167, 139, 250, 0.08) inset !important;
+  font-family: -apple-system, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif !important;
+  animation: actifyIAPanelIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  pointer-events: auto !important;
+  overflow: hidden !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+@keyframes actifyIAPanelIn {
+  from { opacity: 0; transform: scale(0.95) translateY(6px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.actifyxai-ia-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 10px 14px 9px !important;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.2) !important;
+  background: rgba(99, 102, 241, 0.08) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: rgba(167, 139, 250, 0.9) !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  cursor: grab !important;
+  border-radius: 14px 14px 0 0 !important;
+  user-select: none !important;
+}
+
+.actifyxai-ia-header:active {
+  cursor: grabbing !important;
+}
+
+.actifyxai-ia-title {
+  font-size: 11.5px !important;
+}
+
+.actifyxai-ia-close {
+  all: unset !important;
+  cursor: pointer !important;
+  color: rgba(148, 163, 184, 0.5) !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  padding: 2px 5px !important;
+  border-radius: 5px !important;
+  transition: color 0.12s, background 0.12s !important;
+}
+
+.actifyxai-ia-close:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ── Loading dots ────────────────────────────────────────────── */
+
+.actifyxai-ia-loading {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  padding: 12px 0 !important;
+}
+
+.actifyxai-ia-loading span {
+  display: inline-block !important;
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: rgba(139, 92, 246, 0.7) !important;
+  animation: actifyDot 1.2s ease-in-out infinite !important;
+}
+
+.actifyxai-ia-loading span:nth-child(2) {
+  animation-delay: 0.2s !important;
+}
+
+.actifyxai-ia-loading span:nth-child(3) {
+  animation-delay: 0.4s !important;
+}
+
+@keyframes actifyDot {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+  40%            { transform: scale(1);   opacity: 1; }
+}
+
+
+
+
+.actifyxai-ia-error {
+  margin: 0 !important;
+  font-size: 12.5px !important;
+  color: rgba(248, 113, 113, 0.85) !important;
+  text-align: center !important;
+  padding: 8px 0 !important;
+}
+
+/* ── Footer: model tag + copy button ────────────────────────── */
+
+.actifyxai-ia-footer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-top: 10px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+
+.actifyxai-ia-model {
+  font-size: 9.5px !important;
+  color: rgba(100, 116, 139, 0.55) !important;
+  letter-spacing: 0.04em !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+}
+
+.actifyxai-ia-copy {
+  all: unset !important;
+  cursor: pointer !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: rgba(167, 139, 250, 0.85) !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(139, 92, 246, 0.3) !important;
+  background: rgba(99, 102, 241, 0.1) !important;
+  transition: all 0.12s ease !important;
+  font-family: inherit !important;
+}
+
+.actifyxai-ia-copy:hover {
+  background: rgba(99, 102, 241, 0.22) !important;
+  color: #e0d7ff !important;
+  border-color: rgba(167, 139, 250, 0.5) !important;
+}
+
+/* ── IA Header actions row ───────────────────────────────────── */
+
+.actifyxai-ia-header-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+/* ── IA Footer action buttons row ────────────────────────────── */
+
+.actifyxai-ia-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+/* ── Send to ChatGPT button ──────────────────────────────────── */
+
+.actifyxai-ia-send {
+  all: unset !important;
+  cursor: pointer !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: rgba(110, 231, 183, 0.85) !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(52, 211, 153, 0.3) !important;
+  background: rgba(16, 185, 129, 0.1) !important;
+  transition: all 0.12s ease !important;
+  font-family: inherit !important;
+}
+
+.actifyxai-ia-send:hover {
+  background: rgba(16, 185, 129, 0.22) !important;
+  color: #a7f3d0 !important;
+  border-color: rgba(52, 211, 153, 0.55) !important;
+}
+
+/* ── Hint / error helper text ────────────────────────────────── */
+
+.actifyxai-ia-hint {
+  margin: 6px 0 0 !important;
+  font-size: 11px !important;
+  color: rgba(100, 116, 139, 0.6) !important;
+  line-height: 1.5 !important;
+}
+
+.actifyxai-ia-hint code {
+  font-family: 'SF Mono', 'Fira Code', monospace !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  padding: 1px 5px !important;
+  border-radius: 4px !important;
+  font-size: 10px !important;
+  color: rgba(167, 139, 250, 0.8) !important;
+}
+
+/* ── Follow-up zone & convo ──────────────────────────────────── */
+
+.actifyxai-ia-convo {
+  padding: 14px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  overflow-y: auto !important;
+  max-height: 400px !important;
+  min-height: 60px !important;
+}
+
+.actifyxai-bubble {
+  padding: 10px 14px !important;
+  border-radius: 12px !important;
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  max-width: 95% !important;
+  word-break: break-word !important;
+  user-select: text !important;
+}
+
+.actifyxai-bubble-user {
+  background: rgba(99, 102, 241, 0.18) !important;
+  border: 1px solid rgba(99, 102, 241, 0.3) !important;
+  color: #c8d4f0 !important;
+  align-self: flex-end !important;
+  border-bottom-right-radius: 4px !important;
+}
+
+.actifyxai-bubble-ai {
+  background: transparent !important;
+  border: none !important;
+  color: #d4ddf0 !important;
+  align-self: flex-start !important;
+  padding: 0 !important; /* AI answers look like a direct message stream */
+}
+
+/* ── Follow-up input row ─────────────────────────────────────── */
+
+.actifyxai-ia-input-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 10px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+
+.actifyxai-ia-input {
+  all: unset !important;
+  flex: 1 !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 8px !important;
+  padding: 7px 11px !important;
+  font-size: 12.5px !important;
+  color: #d4ddf0 !important;
+  font-family: inherit !important;
+  transition: border-color 0.15s !important;
+  box-sizing: border-box !important;
+}
+
+.actifyxai-ia-input:focus {
+  border-color: rgba(139, 92, 246, 0.5) !important;
+  outline: none !important;
+}
+
+.actifyxai-ia-send-btn {
+  all: unset !important;
+  cursor: pointer !important;
+  background: rgba(99, 102, 241, 0.6) !important;
+  color: #fff !important;
+  border-radius: 7px !important;
+  width: 28px !important;
+  height: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 14px !important;
+  transition: background 0.12s !important;
+  flex-shrink: 0 !important;
+}
+
+.actifyxai-ia-send-btn:hover {
+  background: rgba(99, 102, 241, 0.85) !important;
+}
+
+/* ── Markdown: result area ───────────────────────────────────── */
+
+.actifyxai-ia-result {
+  margin: 0 0 4px !important;
+  font-size: 13.5px !important;
+  line-height: 1.65 !important;
+  color: #d4ddf0 !important;
+  font-weight: 400 !important;
+  word-break: break-word !important;
+  user-select: text !important;
+}
+
+.actifyxai-code-block {
+  background: rgba(0, 0, 0, 0.45) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  padding: 10px 12px !important;
+  overflow-x: auto !important;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  color: #a8d8a8 !important;
+  margin: 8px 0 !important;
+  white-space: pre !important;
+  display: block !important;
+}
+
+.actifyxai-inline-code {
+  font-family: 'SF Mono', 'Fira Code', monospace !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  padding: 1px 5px !important;
+  border-radius: 4px !important;
+  font-size: 11.5px !important;
+  color: rgba(167, 139, 250, 0.9) !important;
+}
+
+.actifyxai-h1, .actifyxai-h2, .actifyxai-h3 {
+  color: #e2e8f5 !important;
+  font-weight: 700 !important;
+  margin: 10px 0 4px !important;
+  line-height: 1.3 !important;
+}
+
+.actifyxai-h1 { font-size: 15px !important; }
+.actifyxai-h2 { font-size: 13.5px !important; }
+.actifyxai-h3 { font-size: 12.5px !important; color: rgba(167, 139, 250, 0.9) !important; }
+
+.actifyxai-ul {
+  padding-left: 16px !important;
+  margin: 4px 0 !important;
+  list-style: disc !important;
+}
+
+.actifyxai-ul li {
+  margin: 3px 0 !important;
+  color: #c8d4ec !important;
+  font-size: 12.5px !important;
+}
+
+.actifyxai-ul li.actifyxai-num {
+  list-style: decimal !important;
+}
+
+/* ── Error Bubble ────────────────────────────────────────────── */
+
+.actifyxai-ia-error-bubble {
+  background: rgba(248, 113, 113, 0.1) !important;
+  border: 1px solid rgba(248, 113, 113, 0.3) !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  align-self: stretch !important;
+}
